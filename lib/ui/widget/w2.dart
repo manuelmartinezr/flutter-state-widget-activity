@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class W2 extends StatelessWidget {
-  const W2({super.key});
-  final double value = 0;
+  const W2({super.key, required this.value});
+  final double value;
   @override
   Widget build(BuildContext context) {
     return Container(

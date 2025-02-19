@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class W3 extends StatelessWidget {
-  const W3({super.key});
-
+  const W3({super.key, required this.value});
+  final double value;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -14,9 +14,7 @@ class W3 extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(10),
             color: Theme.of(context).colorScheme.inversePrimary,
-            child: Text(
-              '0',
-              key: const Key('W3Value'),
+            child: Text(value.toStringAsFixed(1),
             ),
           ),
           Container(
@@ -25,7 +23,9 @@ class W3 extends StatelessWidget {
             child: Column(
               children: [
                 IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      
+                    },
                     icon: const Icon(Icons.add),
                     key: const Key('W3Add')),
                 IconButton(
