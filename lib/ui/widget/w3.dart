@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 class W3 extends StatelessWidget {
-  const W3({super.key, required this.value});
+  const W3({super.key, required this.value, required this.onAdd});
   final double value;
+  final Function(double) onAdd;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -24,12 +25,14 @@ class W3 extends StatelessWidget {
               children: [
                 IconButton(
                     onPressed: () {
-                      
+                       onAdd(1);
                     },
                     icon: const Icon(Icons.add),
                     key: const Key('W3Add')),
                 IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                       onAdd(-1);
+                    },
                     icon: const Icon(Icons.remove),
                     key: const Key('W3Sub'))
               ],

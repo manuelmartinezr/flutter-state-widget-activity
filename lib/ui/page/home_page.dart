@@ -40,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Expanded(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: <Widget>[W1(value: _value, onAdd: onAdd), W2(value: _value, ), W3(value: _value)],
+              children: <Widget>[W1(value: _value, onAdd: onAdd), W2(value: _value, ), W3(value: _value, onAdd: onAdd)],
             ),
           ),
         ],
